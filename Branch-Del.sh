@@ -7,7 +7,7 @@ GITHUB_TOKEN="github_pat_11AQ7LPVQ0tTU8rA6DPhoX_ZA20CjKKoNFzmYcpFYDPJE35i0uuHUnB
 
 DAYS_THRESHOLD=30
 
-CURRENT_DATE=$(10/9/2023 +%s)
+CURRENT_DATE=$(date +%s)
 
 BRANCHES=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/branches" | grep -o '"name": "[^"]*' | sed 's/"name": "//')
 
